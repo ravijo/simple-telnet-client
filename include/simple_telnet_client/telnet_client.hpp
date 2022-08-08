@@ -15,7 +15,7 @@
 #include <vector>
 
 // flag to print requests and responses in the console for debugging purposes
-#define DEBUG_MODE true
+#define DEBUG_MODE false
 
 namespace simple_telnet_client
 {
