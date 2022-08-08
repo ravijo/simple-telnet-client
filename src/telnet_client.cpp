@@ -24,11 +24,11 @@ TelnetClient::TelnetClient(
 
   // telnet options
   const telnet_telopt_t telnetOpts[] = {
-    {TELNET_TELOPT_ECHO, TELNET_WONT, TELNET_DO},
-    {TELNET_TELOPT_TTYPE, TELNET_WILL, TELNET_DONT},
-    {TELNET_TELOPT_COMPRESS2, TELNET_WONT, TELNET_DO},
-    {TELNET_TELOPT_MSSP, TELNET_WONT, TELNET_DO},
-    {-1, 0, 0}};
+    {     TELNET_TELOPT_ECHO, TELNET_WONT,   TELNET_DO},
+    {    TELNET_TELOPT_TTYPE, TELNET_WILL, TELNET_DONT},
+    {TELNET_TELOPT_COMPRESS2, TELNET_WONT,   TELNET_DO},
+    {     TELNET_TELOPT_MSSP, TELNET_WONT,   TELNET_DO},
+    {                     -1,           0,           0}};
 
   // initialize telnet box
   mTelnet = telnet_init(telnetOpts, trampoline, 0, this);
