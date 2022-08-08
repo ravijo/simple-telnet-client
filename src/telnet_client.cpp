@@ -85,7 +85,8 @@ void TelnetClient::telnetEvent(telnet_event_t * event)
     case TELNET_EV_DATA:
       mReceivedMsg = std::string(event->data.buffer, event->data.size);
       #if DEBUG_MODE
-      std::cerr << "response: [" << mReceivedMsg << "]" << std::endl;
+        // print only for debugging
+        std::cerr << "response: [" << mReceivedMsg << "]" << std::endl;
       #endif
       break;
     // data must be sent
@@ -164,8 +165,8 @@ void TelnetClient::execute(const std::string & command)
     // send the execute
     if (FD_ISSET(mSockFd, &mWriteFd)) {
       #if DEBUG_MODE
-      // print only for debugging
-      std::cerr << "request: [" << command << "]" << std::endl;
+        // print only for debugging
+        std::cerr << "request: [" << command << "]" << std::endl;
       #endif
       telnet_send(mTelnet, command.c_str(), command.length());
     }
