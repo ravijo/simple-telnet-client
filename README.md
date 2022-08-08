@@ -78,3 +78,6 @@ https://github.com/ravijo/simple-telnet-client/blob/84a05652415afc40d7171fbea5a5
       ${TELNET_LIBRARY}
     )
     ```
+
+## References
+1. [libtelnet](https://github.com/seanmiddleditch/libtelnet)
