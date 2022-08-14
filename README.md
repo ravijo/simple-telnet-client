@@ -5,7 +5,7 @@ Simplest Telnet Client Ever Made in C/C++
 ## Dependencies
 1. [libtelnet](https://github.com/seanmiddleditch/libtelnet): Install it easily using the folllwing command:
     ```console
-    $ sudo apt install libtelnet
+    $ sudo apt install libtelnet-dev
     ```
 
 ## Installation
