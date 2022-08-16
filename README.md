@@ -79,5 +79,52 @@ https://github.com/ravijo/simple-telnet-client/blob/84a05652415afc40d7171fbea5a5
     )
     ```
 
+
+## Using Docker
+The package can be installed using Docker for testing purposes. Please use the following commands to build and run the docker:
+1. Build Docker
+    ```console
+    ravi@dell:~/simple-telnet-client$ docker build -t client .
+    Sending build context to Docker daemon  92.67kB
+    Step 1/8 : FROM ubuntu:20.04
+     ---> 3bc6e9f30f51
+    Step 2/8 : ENV TZ=Asia/Tokyo
+     ---> f8e22625db16
+    .
+    .
+    .
+    Step 8/8 : WORKDIR /simple-telnet-client/build
+     ---> Using cache
+     ---> efb6c90e291e
+    Successfully built efb6c90e291e
+    Successfully tagged client:latest
+    ```
+2. Run Docker
+    ```console
+    ravi@dell:~/simple-telnet-client$ docker run -it client
+    root@0ebe27c82992:/simple-telnet-client/build# 
+    ```
+3. CMake Porject
+    ```console
+    root@0ebe27c82992:/simple-telnet-client/build# cmake ..
+    -- The C compiler identification is GNU 9.4.0
+    .
+    .
+    .
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /simple-telnet-client/build
+    ```
+4. Make Project
+    ```console
+    root@0ebe27c82992:/simple-telnet-client/build# make
+    Scanning dependencies of target client
+    [ 33%] Building CXX object CMakeFiles/client.dir/src/telnet_client.cpp.o
+    [ 66%] Building CXX object CMakeFiles/client.dir/src/main.cpp.o
+    [100%] Linking CXX executable client
+    [100%] Built target client
+    ```
+
+
 ## References
 1. [libtelnet](https://github.com/seanmiddleditch/libtelnet)
