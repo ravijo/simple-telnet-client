@@ -94,7 +94,6 @@ The package can be installed using Docker for testing purposes. Please use the f
     .
     .
     Step 8/8 : WORKDIR /simple-telnet-client/build
-     ---> Using cache
      ---> efb6c90e291e
     Successfully built efb6c90e291e
     Successfully tagged client:latest
